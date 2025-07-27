@@ -7,7 +7,6 @@
 # =====================================================================================
 
 import pandas as pd
-import geopandas as gpd
 from fastapi import FastAPI, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -56,22 +55,13 @@ async def load_and_process_all_data():
 
     # --- Carregamento de Dados Geoespaciais ---
     try:
-        map_csv_path = os.path.join(DATA_UF_PATH, 'br_geobr_mapas_uf.csv')
-        map_df = pd.read_csv(map_csv_path)
-        map_df['geometria'] = gpd.GeoSeries.from_wkt(map_df['geometria'])
-        gdf = gpd.GeoDataFrame(map_df, geometry='geometria')
-        gdf = gdf.dissolve(by='sigla_uf').reset_index()
-        gdf['nome_estado'] = gdf['sigla_uf'].map(sigla_para_estado)
-        
-        # Reprojeta as coordenadas para o padrão WGS84, usado em mapas web.
-        gdf = gdf.set_crs(epsg=4674, allow_override=True)
-        gdf = gdf.to_crs(epsg=4326)
-
-        geojson_data = gdf.to_json()
-        print("Dados geoespaciais carregados com sucesso.")
+        geojson_path = os.path.join(DATA_UF_PATH, 'brazil_states.geojson')
+        with open(geojson_path, 'r', encoding='utf-8') as f:
+            geojson_data = f.read()
+        print("Arquivo GeoJSON estático carregado com sucesso.")
     except Exception as e:
-        print(f"ERRO ao carregar dados geoespaciais: {e}")
-        geojson_data = {}
+        print(f"ERRO ao carregar arquivo GeoJSON estático: {e}")
+        geojson_data = "{}" # Fallback para um JSON vazio
 
     # --- Processamento dos Dados de Análise ---
 

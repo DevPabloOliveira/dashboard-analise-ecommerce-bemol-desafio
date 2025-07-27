@@ -1,0 +1,16 @@
+product_category_name,total_pedidos_atrasados,taxa_atraso_percentual,percentual_acumulado
+cama_mesa_banho,811,8.85,10.364217252396166
+beleza_saude,774,8.99,20.2555910543131
+esporte_lazer,584,7.8,27.718849840255587
+moveis_decoracao,531,8.55,34.504792332268366
+informatica_acessorios,503,7.74,40.932907348242814
+relogios_presentes,468,8.56,46.91373801916933
+utilidades_domesticas,398,7.0,52.0
+telefonia,348,8.54,56.44728434504792
+automotivo,328,8.65,60.638977635782744
+brinquedos,284,7.52,64.26837060702876
+ferramentas_jardim,274,8.03,67.76996805111821
+bebes,258,9.34,71.06709265175719
+eletronicos,247,9.85,74.22364217252397
+cool_stuff,242,6.86,77.31629392971246
+perfumaria,228,7.42,80.23003194888179

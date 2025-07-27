@@ -1,0 +1,5 @@
+payment_type,tempo_medio_aprovacao_horas,taxa_atraso_percentual,total_pedidos
+boleto,33.01,8.89,19177
+debit_card,9.12,7.96,1483
+voucher,8.29,7.24,2582
+credit_card,4.42,7.94,73212

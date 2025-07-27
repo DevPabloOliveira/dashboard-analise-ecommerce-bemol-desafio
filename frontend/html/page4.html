@@ -1,0 +1,57 @@
+<section class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-card-title">Receita Bruta Total</div>
+        <div id="financeiro-kpi-receita-bruta-total" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Receita Líquida Total Pós-Frete</div>
+        <div id="financeiro-kpi-receita-liquida-total-pos-frete" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Margem Média Pós-Frete</div>
+        <div id="financeiro-kpi-margem-media-pos-frete" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Categorias para 80% da Receita</div>
+        <div id="financeiro-kpi-num-categorias-80-receita" class="kpi-card-value">--</div>
+    </div>
+</section>
+
+<main class="page-container" style="grid-template-columns: 1fr;"> 
+    <section class="page-main-content" style="grid-column: 1 / span 1;">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>Análise de Pareto da Receita Pós-Frete</h2>
+            </div>
+            <p class="description">Identificação das categorias que, somadas, geram 80% da receita líquida após o frete.</p>
+            <div class="chart-container large"><canvas id="financeiro-pareto-receita-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-chart-column"></i>
+                <h2>Composição da Receita Bruta (Categorias de Maior Impacto)</h2>
+            </div>
+            <p class="description">Detalhamento da receita líquida pós-frete e custo do frete para as 10 categorias de maior impacto financeiro.</p>
+            <div class="chart-container large" style="height: 400px;"><canvas id="financeiro-composicao-receita-chart"></canvas></div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h2>Distribuição da Receita Bruta por Categoria</h2>
+            </div>
+            <p class="description">Histograma da receita bruta por categoria com indicação de quartis e limiar.</p>
+            <div class="chart-container large"><canvas id="financeiro-distribuicao-receita-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-percent"></i>
+                <h2>Categorias com Maiores Margens Percentuais</h2>
+            </div>
+            <p class="description">As 10 categorias com a maior margem percentual de lucro pós-frete.</p>
+            <div class="chart-container large" style="height: 350px;"><canvas id="financeiro-maiores-margens-chart"></canvas></div>
+        </div>
+    </section>
+    <aside class="page-sidebar" style="display: none;"></aside>
+</main>

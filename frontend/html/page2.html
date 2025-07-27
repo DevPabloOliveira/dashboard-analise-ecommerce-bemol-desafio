@@ -1,0 +1,76 @@
+<section class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-card-title">Tempo Médio de Entrega Nacional</div>
+        <div id="logistica-kpi-tempo-medio-nacional" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Taxa de Atraso Nacional</div>
+        <div id="logistica-kpi-taxa-atraso-nacional" class="kpi-card-value accent">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Estado com Maior Atraso Médio</div>
+        <div id="logistica-kpi-estado-maior-atraso" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Queda na Satisfação (Atraso)</div>
+        <div id="logistica-kpi-queda-satisfacao" class="kpi-card-value accent">--</div>
+    </div>
+</section>
+
+<main class="page-container">
+    <section class="page-main-content">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h2>Atraso Médio por Estado</h2>
+            </div>
+            <p class="description">Análise do tempo médio (em dias) que um pedido atrasa em cada estado da federação.</p>
+            <div id="leafletMap" style="height: 500px; width: 100%;"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-calendar-alt"></i>
+                <h2>Sazonalidade dos Atrasos (Volume vs. Taxa)</h2>
+            </div>
+            <p class="description">Comparação da evolução mensal do volume de pedidos e da taxa de atraso.</p>
+            <div class="chart-container large"><canvas id="logistica-sazonalidade-atrasos-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-percent"></i>
+                <h2>Pareto dos Atrasos por Categoria</h2>
+            </div>
+            <p class="description">Categorias de produtos que mais contribuem para o volume de atrasos (até 80% do total).</p>
+            <div class="chart-container large"><canvas id="logistica-pareto-atrasos-chart"></canvas></div>
+        </div>
+    </section>
+    <aside class="page-sidebar"> <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h2>Proporção de Pedidos Atrasados</h2>
+            </div>
+            <div class="chart-container"><canvas id="logistica-proporcao-atrasos-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-route"></i>
+                <h2>Atraso por Tipo de Entrega</h2>
+            </div>
+            <div class="chart-container"><canvas id="logistica-atraso-tipo-entrega-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-star"></i>
+                <h2>Impacto do Atraso na Satisfação</h2>
+            </div>
+            <div class="chart-container"><canvas id="logistica-satisfacao-vs-atraso-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-clock"></i>
+                <h2>Impacto do Método de Pagamento (Aprovação e Atraso)</h2>
+            </div>
+            <div class="chart-container large"><canvas id="logistica-impacto-pagamento-chart"></canvas></div>
+        </div>
+    </aside>
+</main>

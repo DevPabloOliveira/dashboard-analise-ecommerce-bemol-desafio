@@ -1,0 +1,53 @@
+<section class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-card-title">Total Geral de Vendas</div>
+        <div id="vendas-kpi-total-geral" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Categoria de Maior Volume</div>
+        <div id="vendas-kpi-categoria-volume" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Acumulado das 8 Principais (%)</div>
+        <div id="vendas-kpi-pareto-8-principais" class="kpi-card-value">--</div>
+    </div>
+</section>
+
+<main class="page-container page-vendas-layout"> 
+    <section class="page-main-content"> 
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-chart-bar"></i>
+                <h2>Ranking de Vendas por Categoria (15 Principais)</h2>
+            </div>
+            <p class="description">As categorias de produtos com maior volume de vendas em número de pedidos.</p>
+            <div class="chart-container large"><canvas id="vendas-ranking-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-percentage"></i>
+                <h2>Análise de Pareto de Vendas</h2>
+            </div>
+            <p class="description">Identificação das categorias que, somadas, representam 80% do volume total de vendas.</p>
+            <div class="chart-container large"><canvas id="vendas-pareto-chart"></canvas></div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-calendar-alt"></i>
+                <h2>Sazonalidade Mensal (Categorias Estratégicas)</h2>
+            </div>
+            <p class="description">Volume de vendas mensal das categorias que, somadas, acumulam 60% das vendas totais.</p>
+            <div class="chart-container large"><canvas id="vendas-sazonalidade-mensal-chart"></canvas></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h2>Sazonalidade Trimestral (Categorias Estratégicas)</h2>
+            </div>
+            <p class="description">Volume de vendas trimestral das categorias que, somadas, acumulam 60% das vendas totais.</p>
+            <div class="chart-container large"><canvas id="vendas-sazonalidade-trimestral-chart"></canvas></div>
+        </div>
+    </section>
+    <aside class="page-sidebar" style="display: none;"></aside> 
+</main>

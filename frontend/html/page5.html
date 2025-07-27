@@ -1,0 +1,50 @@
+<section class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-card-title">Taxa de Conversão Média Nacional</div>
+        <div id="marketing-kpi-taxa-conversao-nacional" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Estado com Maior Taxa de Conversão</div>
+        <div id="marketing-kpi-estado-maior-conversao" class="kpi-card-value">--</div>
+    </div>
+    <div class="kpi-card">
+        <div class="kpi-card-title">Tipo de Pagamento com Maior Conversão</div>
+        <div id="marketing-kpi-tipo-pagamento-maior-conversao" class="kpi-card-value">--</div>
+    </div>
+</section>
+
+<main class="page-container" style="grid-template-columns: 1fr;"> 
+    <section class="page-main-content" style="grid-column: 1 / span 1; display: flex; flex-direction: column; gap: 2rem;">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-map-marked-alt"></i> <h2>Análise de Marketing por Estado</h2> </div>
+            <p class="description">Comparativo da taxa de conversão e do volume total de pedidos para os 10 estados com maior número de transações.</p>
+            <div class="responsive-grid-2-col"> 
+                <div>
+                    <h3 class="chart-subtitle">Taxa de Conversão (%)</h3>
+                    <div class="chart-container large"><canvas id="marketing-conversao-estado-chart"></canvas></div>
+                </div>
+                <div>
+                    <h3 class="chart-subtitle">Volume Total de Pedidos</h3>
+                    <div class="chart-container large"><canvas id="marketing-total-pedidos-estado-chart"></canvas></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-credit-card"></i>
+                 <h2>Análise de Marketing por Pagamento</h2> </div>
+            <p class="description">Análise da taxa de conversão e popularidade dos diferentes métodos de pagamento.</p>
+            <div class="responsive-grid-2-col">
+                <div>
+                    <h3 class="chart-subtitle">Taxa de Conversão (%)</h3>
+                    <div class="chart-container large"><canvas id="marketing-conversao-pagamento-chart"></canvas></div>
+                </div>
+                <div>
+                    <h3 class="chart-subtitle">Volume Total de Pedidos</h3>
+                    <div class="chart-container large"><canvas id="marketing-total-pedidos-pagamento-chart"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

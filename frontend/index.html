@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Análise de E-commerce Desafio Bemol 2025</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.2.1"></script> 
+</head>
+<body>
+    <div class="container">
+<header class="header">
+            <img src="https://raw.githubusercontent.com/google/material-design-icons/master/png/maps/local_shipping/materialicons/48dp/2x/baseline_local_shipping_black_48dp.png" alt="Logo da Empresa" class="logo" style="filter: invert(1);">
+            <div class="header-title">
+                <h1>Dashboard de Análise de E-commerce</h1>
+                <div class="header-subtitle">
+                    <span>Desafio de Estágio Bemol 2025</span>
+                    <span class="separator">|</span>
+                    <span>Autor: Pablo Oliveira</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#page1" data-page="page1">Vendas</a></li>
+                <li><a href="#page2" data-page="page2">Logística</a></li>
+                <li><a href="#page3" data-page="page3">Satisfação do Cliente</a></li>
+                <li><a href="#page4" data-page="page4">Financeiro</a></li>
+                <li><a href="#page5" data-page="page5">Marketing</a></li>
+                 <li><a href="#page6" data-page="page6">Sobre</a></li> 
+            </ul>
+        </nav>
+
+        <main class="dashboard-content" id="dashboard-content">
+            <div class="page-placeholder">
+                <h2>Bem-vindo ao Dashboard!</h2>
+                <p>Selecione uma análise no menu acima para começar.</p>
+            </div>
+        </main>
+    </div>
+
+    
+    <script src="/static/js/main.js"></script> <script src="/static/js/page1.js"></script>
+    <script src="/static/js/page2.js"></script>
+    <script src="/static/js/page3.js"></script>
+    <script src="/static/js/page4.js"></script>
+    <script src="/static/js/page5.js"></script>
+    <script src="/static/js/page6.js"></script> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>

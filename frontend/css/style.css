@@ -1,0 +1,420 @@
+/**
+ * =====================================================================================
+ * Folha de Estilos Principal (style.css)
+ *
+ * Autor: Pablo Oliveira
+ * Descrição: Este arquivo contém todos os estilos para o dashboard de análise,
+ * incluindo layout, componentes, tipografia e responsividade.
+ *
+ * Estrutura do Arquivo:
+ * 1. Imports e Variáveis Globais (:root)
+ * 2. Estilos de Base e Reset
+ * 3. Estrutura e Layout Principal
+ * 4. Estilos dos Componentes (Header, Nav, Cards, etc.)
+ * 5. Classes Utilitárias
+ * 6. Estilos Específicos por Página
+ * 7. Bloco de Responsividade (Media Queries)
+ * =====================================================================================
+ */
+
+/* --- 1. Imports e Variáveis Globais --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+:root {
+    --color-background: rgb(0, 0, 0);
+    --color-surface: rgb(42, 43, 96);
+    --color-primary: rgb(96, 117, 183);
+    --color-accent: rgb(203, 62, 69);
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: rgb(160, 170, 200);
+}
+
+/* --- 2. Estilos de Base e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+/* --- 3. Estrutura e Layout Principal --- */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.dashboard-content {
+    background-color: var(--color-background);
+    min-height: 500px;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.page-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.page-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.page-placeholder {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    color: var(--color-text-secondary);
+}
+
+.page-placeholder h2 {
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+
+/* =====================================================================================
+   4. Estilos dos Componentes
+   ===================================================================================== */
+
+/* --- Cabeçalho (Header) --- */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-surface);
+    padding-bottom: 1.5rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.5rem;
+}
+
+.header-title h1 {
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    margin-top: 0.25rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.header-subtitle .separator {
+    color: var(--color-surface);
+    font-weight: 700;
+}
+
+/* --- Navegação Principal --- */
+.main-nav {
+    margin-bottom: 2rem;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+/* --- Cards de KPI --- */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    background-color: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.kpi-card-title {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.kpi-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita o texto a 2 linhas */
+    -webkit-box-orient: vertical;
+}
+
+.kpi-card-value.accent {
+    color: var(--color-accent);
+}
+
+.kpi-card-value-text {
+    font-size: 1.5rem;
+    -webkit-line-clamp: 2;
+    line-height: 1.2;
+}
+
+/* --- Cards de Conteúdo --- */
+.card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.card-header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.card p.description {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Gráficos e Mapas --- */
+.chart-container {
+    height: 250px;
+}
+
+.chart-container.large {
+    height: 400px;
+}
+
+.chart-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#leafletMap {
+    height: 600px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #000;
+    z-index: 1;
+}
+
+.info.legend {
+    padding: 8px 12px;
+    font: 12px/1.5 'Inter', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--color-text-secondary);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    border: 1px solid var(--color-surface);
+}
+
+.info.legend i {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+
+/* --- 5. Classes Utilitárias --- */
+.responsive-grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+
+/* --- 6. Estilos Específicos por Página --- */
+
+/* Página de Vendas (page1) */
+.page-vendas-layout {
+    grid-template-columns: 1fr !important;
+}
+
+.page-vendas-layout .page-main-content {
+    grid-column: 1 / -1;
+}
+
+/* Página "Sobre" (page6) */
+.info-card-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.info-card-list li::before {
+    content: "\f058"; /* check-circle icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.2rem;
+}
+
+.info-card-list li strong {
+    display: block;
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.info-card-list li p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* =====================================================================================
+   7. Bloco de Responsividade (Media Queries)
+   ===================================================================================== */
+
+/* --- Breakpoint para Tablets (<= 992px) --- */
+@media (max-width: 992px) {
+    body {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .header-title h1 {
+        font-size: 1.6rem;
+    }
+
+    .main-nav ul {
+        justify-content: flex-start;
+    }
+
+    .page-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-main-content {
+        order: 1;
+    }
+
+    .page-sidebar {
+        order: 2;
+    }
+
+    .kpi-card-value {
+        font-size: 1.75rem;
+    }
+
+    .kpi-card-value-text {
+        font-size: 1.3rem;
+    }
+
+    #leafletMap {
+        height: 450px;
+    }
+}
+
+/* --- Breakpoint Intermediário para Grids (<= 768px) --- */
+@media (max-width: 768px) {
+    .responsive-grid-2-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Breakpoint para Celulares (<= 576px) --- */
+@media (max-width: 576px) {
+    .kpi-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kpi-card-value {
+        font-size: 1.5rem;
+    }
+    
+    .kpi-card-value-text {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .chart-container.large {
+        height: 300px;
+    }
+}

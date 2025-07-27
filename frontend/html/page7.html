@@ -11,12 +11,10 @@
                     Selecione uma das análises abaixo para visualizar o notebook correspondente, exportado diretamente do Databricks.
                 </p>
                 <ul class="notebook-list">
-                    <!-- A lista será gerada pelo JS -->
                 </ul>
             </div>
         </div>
 
-        <!-- O container do visualizador agora usará um iframe -->
         <div id="notebook-viewer-container" style="display: none;">
             <div class="card">
                 <div class="card-header notebook-viewer-header">
@@ -25,7 +23,6 @@
                     </button>
                     <h2 id="notebook-title"></h2>
                 </div>
-                <!-- ALTERAÇÃO PRINCIPAL: Substituímos a div por um iframe -->
                 <iframe id="notebook-frame" class="notebook-iframe-content" frameborder="0"></iframe>
             </div>
         </div>

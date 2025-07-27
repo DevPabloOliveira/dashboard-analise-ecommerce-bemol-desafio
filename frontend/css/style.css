@@ -418,3 +418,96 @@ body {
         height: 300px;
     }
 }
+
+/* --- Estilos para o botão de link do repositório na página "Sobre" --- */
+.repo-link-container {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem; /* Aumenta o espaço antes da lista de análises */
+}
+
+.repo-link-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem; 
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.repo-link-button:hover {
+    background-color: rgb(116, 137, 203); 
+    transform: scale(1.05); 
+}
+
+.repo-link-button i {
+    font-size: 1.2rem;
+}
+
+/* --- Estilos para o Visualizador de Notebooks (page7) --- */
+.notebook-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.notebook-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.notebook-list li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+}
+
+.notebook-list li {
+    margin-bottom: 1rem;
+}
+
+.notebook-viewer-header {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.repo-link-button.small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Adiciona a cor 'accent' para o novo botão */
+.repo-link-button.accent {
+    background-color: var(--color-accent);
+}
+.repo-link-button.accent:hover {
+    background-color: rgb(223, 82, 89); /* Tom mais claro do accent */
+}
+
+/* Garante que o container dos botões possa ter mais de um botão */
+.repo-link-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* --- Estilos para o Iframe do Visualizador de Notebooks --- */
+.notebook-iframe-content {
+    width: 100%;
+    height: 80vh; /* Usa 80% da altura da tela, para dar bastante espaço */
+    border: 1px solid var(--color-surface); /* Borda sutil para integrar ao design */
+    border-radius: 8px;
+    background-color: #FFFFFF; /* Fundo branco para o caso de o notebook não ter um */
+}

@@ -4,8 +4,6 @@
 
 > Projeto desenvolvido como solução para o Desafio de Estágio Bemol 2025.
 
-*(Nota: Recomenda-se substituir este placeholder por uma captura de tela real da aplicação).*
-
 ## Índice
 
   - [Visão Geral](https://www.google.com/search?q=%23vis%C3%A3o-geral)

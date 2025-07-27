@@ -1,0 +1,4 @@
+fastapi==0.115.13
+uvicorn==0.34.3
+pandas==2.3.0
+geopandas==1.1.0

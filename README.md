@@ -34,7 +34,6 @@ O dashboard apresenta análises divididas em cinco seções estratégicas:
   * **FastAPI:** Framework para a construção da API.
   * **Uvicorn:** Servidor ASGI para execução da aplicação.
   * **Pandas:** Para manipulação e análise dos dados.
-  * **Geopandas:** Para processamento dos dados geoespaciais.
 
 #### **Frontend**
 

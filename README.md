@@ -16,15 +16,27 @@
 
 Este projeto consiste em um dashboard interativo para a análise de dados de uma operação de e-commerce. A aplicação é construída com uma arquitetura que desacopla o backend do frontend, utilizando Python com FastAPI para o processamento de dados e exposição de endpoints via API REST. O frontend é desenvolvido com HTML5, CSS3 e JavaScript puro (Vanilla JS), consumindo a API para renderizar visualizações de dados dinâmicas no estilo SPA (Single-Page Application).
 
+**Os notebooks Jupyter (`.ipynb`) com todo o processo de exploração e tratamento dos dados estão disponíveis neste repositório.**
+
 ## Principais Análises e Funcionalidades
 
-O dashboard apresenta análises divididas em cinco seções estratégicas:
+O dashboard apresenta visualizações interativas divididas em cinco seções estratégicas:
 
-  * **Vendas:** Ranking de categorias por volume, análise de Pareto (80/20) e performance de vendas com sazonalidade mensal e trimestral.
-  * **Logística:** Cálculo do tempo médio de entrega, mapa coroplético de atrasos por estado e análise dos fatores que impactam a eficiência logística.
-  * **Satisfação do Cliente:** Distribuição quantitativa das avaliações (1 a 5 estrelas) e ranking das categorias com as melhores e piores notas médias.
-  * **Financeiro:** Análise de lucratividade por categoria, Pareto de receita líquida e composição da receita bruta versus custo de frete.
-  * **Marketing:** Estudo da taxa de conversão de vendas por estado e por método de pagamento, focando nos maiores volumes de transações.
+* **Vendas:** Ranking de categorias por volume, análise de Pareto (80/20) e performance de vendas com sazonalidade mensal e trimestral.
+* **Logística:** Cálculo do tempo médio de entrega, mapa coroplético de atrasos por estado e análise dos fatores que impactam a eficiência logística.
+* **Satisfação do Cliente:** Distribuição quantitativa das avaliações (1 a 5 estrelas) e ranking das categorias com as melhores e piores notas médias.
+* **Financeiro:** Análise de lucratividade por categoria, Pareto de receita líquida e composição da receita bruta versus custo de frete.
+* **Marketing:** Estudo da taxa de conversão de vendas por estado e por método de pagamento.
+
+## Notebooks da Análise (.ipynb)
+
+A pasta [`/notebook-desafio`](./notebook-desafio/) contém os arquivos Jupyter Notebook originais utilizados para realizar cada uma das análises. Eles documentam todo o processo de limpeza, tratamento, exploração e geração dos datasets que alimentam o dashboard.
+
+* [**Análise 1:** Performance de Vendas](./notebook-desafio/Pablo%20Oliveira%20Desafio%201-a.ipynb)
+* [**Análise 2:** Logística](./notebook-desafio/Pablo%20Oliveira%20Desafio%202-a.ipynb)
+* [**Análise 3:** Satisfação do Cliente](./notebook-desafio/Pablo%20Oliveira%20Desafio%203-a.ipynb)
+* [**Análise 4:** Financeira](./notebook-desafio/Pablo%20Oliveira%20Desafio%204-a.ipynb)
+* [**Análise 5:** Marketing](./notebook-desafio/Pablo%20Oliveira%20Desafio%205-a.ipynb)
 
 ## Pilha de Tecnologias (Tech Stack)
 
